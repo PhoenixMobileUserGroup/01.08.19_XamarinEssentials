@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<views:ViewBase   
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:views="clr-namespace:XamarinEssentialsDemonstration.Views"
+    x:Class="XamarinEssentialsDemonstration.Views.ClipboardView">
+
+    <Grid BackgroundColor="Black">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackLayout Orientation="Horizontal"
+                     Grid.Row="0"
+                     VerticalOptions="Center"
+                     Margin="20">
+            <Label Text="Id:"
+                   FontSize="Small"
+                   TextColor="White" />
+            <Label Text="{Binding Id}"
+                   FontSize="Small"
+                   TextColor="White" />
+        </StackLayout>
+        <Button Grid.Row="1"
+                Text="REFRESH ID"
+                Command="{Binding RefreshIdTappedCommand}" />
+        <Button Grid.Row="2"
+                Text="COPY TO CLIPBOARD"
+                Command="{Binding CopyIdTappedCommand}" />
+        <Entry Grid.Row="3"
+               TextColor="White"
+               BackgroundColor="Black"/>
+    </Grid>
+</views:ViewBase>

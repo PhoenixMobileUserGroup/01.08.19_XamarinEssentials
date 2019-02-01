@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<views:ViewBase  
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:views="clr-namespace:XamarinEssentialsDemonstration.Views"
+    x:Class="XamarinEssentialsDemonstration.Views.AccelerometerView">
+
+    <Grid BackgroundColor="Black">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackLayout Orientation="Horizontal" 
+                     Grid.Row="0" 
+                     VerticalOptions="Center" 
+                     Margin="20">
+            <Label Text="X:" 
+                   FontSize="Large" 
+                   TextColor="White"/>
+            <Label Text="{Binding XReading}"
+                   FontSize="Large"
+                   TextColor="White" />
+        </StackLayout>
+        <StackLayout Orientation="Horizontal"
+                     Grid.Row="1"
+                     VerticalOptions="Center"
+                     Margin="20">
+            <Label Text="Y:"
+                   FontSize="Large"
+                   TextColor="White" />
+            <Label Text="{Binding YReading}"
+                   FontSize="Large"
+                   TextColor="White" />
+        </StackLayout>
+        <StackLayout Orientation="Horizontal"
+                     Grid.Row="2"
+                     VerticalOptions="Center"
+                     Margin="20">
+            <Label Text="Z:"
+                   FontSize="Large"
+                   TextColor="White" />
+            <Label Text="{Binding ZReading}"
+                   FontSize="Large"
+                   TextColor="White" />
+        </StackLayout>
+    </Grid>
+</views:ViewBase>

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<views:ViewBase  
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:views="clr-namespace:XamarinEssentialsDemonstration.Views"
+    x:Class="XamarinEssentialsDemonstration.Views.ConnectivityView">
+    
+    <Grid BackgroundColor="{Binding BackgroundColor}">
+        <StackLayout Orientation="Horizontal"
+                     VerticalOptions="Center"
+                     HorizontalOptions="Center">
+            <Label Text="Network Access:"
+                   FontSize="Large"
+                   TextColor="White" />
+            <Label Text="{Binding NetworkAccess}"
+                   FontSize="Large"
+                   TextColor="White" />
+        </StackLayout>
+    </Grid>
+</views:ViewBase>

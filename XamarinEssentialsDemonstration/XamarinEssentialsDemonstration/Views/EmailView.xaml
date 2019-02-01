@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<views:ViewBase  
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:views="clr-namespace:XamarinEssentialsDemonstration.Views"
+    x:Class="XamarinEssentialsDemonstration.Views.EmailView">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Label Text="Recipients:"
+               FontSize="Medium"
+               VerticalOptions="End"
+               Grid.Row="0" />
+        <Entry Placeholder="RecipientOne@test.com, RecipentTwo@test.com,..."
+               Text="{Binding Recipients, Mode=TwoWay}" 
+               Grid.Row="1"/>
+        <Label Text="Subject:"
+               FontSize="Medium"
+               VerticalOptions="End"
+               Grid.Row="2" />
+        <Entry Placeholder="Subject"
+               Text="{Binding Subject, Mode=TwoWay}"
+               Grid.Row="3" />
+        <Label Text="Body:"
+               FontSize="Medium"
+               VerticalOptions="End"
+               Grid.Row="4" />
+        <Entry Placeholder="Subject"
+               Text="{Binding Body, Mode=TwoWay}"
+               Grid.Row="5" />
+        <Button Text="COMPOSE EMAIL"
+                Command="{Binding ComposeEmailTappedCommand}"
+                Grid.Row="6" />
+    </Grid>
+</views:ViewBase>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<views:ViewBase xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:XamarinEssentialsDemonstration.Views"
+             x:Class="XamarinEssentialsDemonstration.Views.DependencyServiceOpenBrowserView">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackLayout Grid.Row="0"
+                     VerticalOptions="Center"
+                     Margin="50">
+            <Label Text="Url:"
+                   FontSize="Large" />
+            <Entry Text="{Binding Url, Mode=TwoWay}"
+                   Placeholder="http://www.google.com" />
+        </StackLayout>
+        <Button Text="OPEN BROWSER"
+                Command="{Binding OpenBrowserTappedCommand}"
+                Grid.Row="1" />
+    </Grid>
+</views:ViewBase>

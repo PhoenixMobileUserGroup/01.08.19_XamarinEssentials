@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<views:ViewBase   
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:views="clr-namespace:XamarinEssentialsDemonstration.Views"
+    x:Class="XamarinEssentialsDemonstration.Views.ApplicationInformationVew">
+    
+    <Grid BackgroundColor="Black">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackLayout Orientation="Horizontal"
+                     Grid.Row="0"
+                     VerticalOptions="Center"
+                     Margin="20">
+            <Label Text="App Name:"
+                   FontSize="Medium"
+                   TextColor="White" />
+            <Label Text="{Binding AppName}"
+                   FontSize="Medium"
+                   TextColor="White" />
+        </StackLayout>
+        <StackLayout Orientation="Horizontal"
+                     Grid.Row="1"
+                     VerticalOptions="Center"
+                     Margin="20">
+            <Label Text="Package Name:"
+                   FontSize="Medium"
+                   TextColor="White" />
+            <Label Text="{Binding PackageName}"
+                   FontSize="Medium"
+                   TextColor="White" />
+        </StackLayout>
+        <StackLayout Orientation="Horizontal"
+                     Grid.Row="2"
+                     VerticalOptions="Center"
+                     Margin="20">
+            <Label Text="Version:"
+                   FontSize="Medium"
+                   TextColor="White" />
+            <Label Text="{Binding Version}"
+                   FontSize="Medium"
+                   TextColor="White" />
+        </StackLayout>
+        <StackLayout Orientation="Horizontal"
+                        Grid.Row="3"
+                        VerticalOptions="Center"
+                        Margin="20">
+            <Label Text="Build:"
+                    FontSize="Medium"
+                    TextColor="White" />
+            <Label Text="{Binding Build}"
+                   FontSize="Medium"
+                   TextColor="White" />
+        </StackLayout>
+        <Button Grid.Row="4"
+                Text="Show Settings"
+                Command="{Binding ShowSettingsTappedCommand}" />
+
+    </Grid>
+</views:ViewBase>

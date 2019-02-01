@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<views:ViewBase  
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:views="clr-namespace:XamarinEssentialsDemonstration.Views"
+    x:Class="XamarinEssentialsDemonstration.Views.CompassView">
+
+    <Grid BackgroundColor="Black">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackLayout Orientation="Horizontal"
+                     Grid.Row="0"
+                     VerticalOptions="Center"
+                     HorizontalOptions="Center"
+                     Margin="20">
+            <Label Text="Reading:"
+                   FontSize="Small"
+                   TextColor="White" />
+            <Label Text="{Binding MagneticNorth}"
+                   FontSize="Small"
+                   TextColor="White" />
+            <Label Text="Degrees"
+                   FontSize="Small"
+                   TextColor="White" />
+        </StackLayout>
+        <StackLayout Orientation="Horizontal"
+                     Grid.Row="1"
+                     VerticalOptions="Center"
+                     HorizontalOptions="Center"
+                     Margin="20">
+            <Label Text="{Binding Direction}"
+                   FontSize="Large"
+                   TextColor="White" />
+        </StackLayout>
+    </Grid>
+</views:ViewBase>

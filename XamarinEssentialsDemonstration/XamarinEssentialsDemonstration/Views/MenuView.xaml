@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<views:ViewBase 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:views="clr-namespace:XamarinEssentialsDemonstration.Views"
+    x:Class="XamarinEssentialsDemonstration.Views.MenuView">
+
+    <ScrollView>
+        <StackLayout BackgroundColor="Black">
+            <Button Text="Flashlight"
+                    Command="{Binding FlashlightTappedCommand}" />
+            <Button Text="Accelerometer"
+                    Command="{Binding AccelerometerTappedCommand}" />
+            <Button Text="Battery"
+                    Command="{Binding BatteryTappedCommand}" />
+            <Button Text="Application Information"
+                    Command="{Binding ApplicationInformationTappedCommand }" />
+            <Button Text="Clipboard"
+                    Command="{Binding ClipboardTappedCommand }" />
+            <Button Text="Compass"
+                    Command="{Binding CompassTappedCommand }" />
+            <Button Text="Connectivity"
+                    Command="{Binding ConnectivityTappedCommand }" />
+            <Button Text="Device Display Information"
+                    Command="{Binding DeviceDisplayInformationTappedCommand }" />
+            <Button Text="Device Information"
+                    Command="{Binding DeviceInformationTappedCommand }" />
+            <Button Text="Email"
+                    Command="{Binding EmailTappedCommand }" />
+            <Button Text="Gyroscope"
+                    Command="{Binding GyroscopeTappedCommand }" />
+            <Button Text="Vibration"
+                    Command="{Binding VibrationTappedCommand }" />
+            <Button Text="Open Browser"
+                    Command="{Binding OpenBrowserTappedCommand }" />
+            <Button Text="Dependency Service Open Browser"
+                    Command="{Binding DependencyServiceOpenBrowserCommand }" />
+        </StackLayout>
+    </ScrollView>
+
+</views:ViewBase>

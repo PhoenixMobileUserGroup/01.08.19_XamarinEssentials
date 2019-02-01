@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<views:ViewBase  
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:views="clr-namespace:XamarinEssentialsDemonstration.Views"
+    x:Class="XamarinEssentialsDemonstration.Views.DeviceDisplayInformationView">
+    
+    <Grid BackgroundColor="Black">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="6*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <ScrollView Grid.Row="0">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <StackLayout Orientation="Horizontal"
+                             Grid.Row="0"
+                             VerticalOptions="Center"
+                             HorizontalOptions="Center"
+                             Margin="20">
+                    <Label Text="Orientation:"
+                           FontSize="Small"
+                           TextColor="White" />
+                    <Label Text="{Binding Orientation}"
+                           FontSize="Small"
+                           TextColor="White" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal"
+                             Grid.Row="1"
+                             VerticalOptions="Center"
+                             HorizontalOptions="Center"
+                             Margin="20">
+                    <Label Text="Rotation:"
+                           FontSize="Small"
+                           TextColor="White" />
+                    <Label Text="{Binding Rotation}"
+                           FontSize="Small"
+                           TextColor="White" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal"
+                             Grid.Row="2"
+                             VerticalOptions="Center"
+                             HorizontalOptions="Center"
+                             Margin="20">
+                    <Label Text="Width:"
+                           FontSize="Small"
+                           TextColor="White" />
+                    <Label Text="{Binding Width}"
+                           FontSize="Small"
+                           TextColor="White" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal"
+                             Grid.Row="3"
+                             VerticalOptions="Center"
+                             HorizontalOptions="Center"
+                             Margin="20">
+                    <Label Text="Height:"
+                           FontSize="Small"
+                           TextColor="White" />
+                    <Label Text="{Binding Height}"
+                           FontSize="Small"
+                           TextColor="White" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal"
+                             Grid.Row="4"
+                             VerticalOptions="Center"
+                             HorizontalOptions="Center"
+                             Margin="20">
+                    <Label Text="Density:"
+                           FontSize="Small"
+                           TextColor="White" />
+                    <Label Text="{Binding Density}"
+                           FontSize="Small"
+                           TextColor="White" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal"
+                             Grid.Row="5"
+                             VerticalOptions="Center"
+                             HorizontalOptions="Center"
+                             Margin="20">
+                    <Label Text="Screen Lock Set:"
+                           FontSize="Small"
+                           TextColor="White" />
+                    <Label Text="{Binding ScreenLockSet}"
+                           FontSize="Small"
+                           TextColor="White" />
+                </StackLayout>
+            </Grid>
+        </ScrollView>
+        
+        <Button Grid.Row="1"
+                Text="TOGGLE SCREEN LOCK"
+                Command="{Binding ToggleScreenLockTappedCommand}" />
+    </Grid>
+</views:ViewBase>

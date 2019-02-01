@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<views:ViewBase 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:views="clr-namespace:XamarinEssentialsDemonstration.Views"
+    x:Class="XamarinEssentialsDemonstration.Views.DeviceInformationView">
+
+    <ScrollView>
+        <Grid BackgroundColor="Black">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <StackLayout Orientation="Horizontal"
+                         Grid.Row="0"
+                         VerticalOptions="Center"
+                         HorizontalOptions="Center"
+                         Margin="20">
+                <Label Text="Device Model:"
+                       FontSize="Small"
+                       TextColor="White" />
+                <Label Text="{Binding DeviceModel}"
+                       FontSize="Small"
+                       TextColor="White" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal"
+                         Grid.Row="1"
+                         VerticalOptions="Center"
+                         HorizontalOptions="Center"
+                         Margin="20">
+                <Label Text="Manufacturer:"
+                       FontSize="Small"
+                       TextColor="White" />
+                <Label Text="{Binding Manufacturer}"
+                       FontSize="Small"
+                       TextColor="White" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal"
+                         Grid.Row="2"
+                         VerticalOptions="Center"
+                         HorizontalOptions="Center"
+                         Margin="20">
+                <Label Text="Device Name:"
+                       FontSize="Small"
+                       TextColor="White" />
+                <Label Text="{Binding DeviceName}"
+                       FontSize="Small"
+                       TextColor="White" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal"
+                         Grid.Row="3"
+                         VerticalOptions="Center"
+                         HorizontalOptions="Center"
+                         Margin="20">
+                <Label Text="Version:"
+                       FontSize="Small"
+                       TextColor="White" />
+                <Label Text="{Binding Version}"
+                       FontSize="Small"
+                       TextColor="White" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal"
+                         Grid.Row="4"
+                         VerticalOptions="Center"
+                         HorizontalOptions="Center"
+                         Margin="20">
+                <Label Text="Platform:"
+                       FontSize="Small"
+                       TextColor="White" />
+                <Label Text="{Binding Platform}"
+                       FontSize="Small"
+                       TextColor="White" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal"
+                         Grid.Row="5"
+                         VerticalOptions="Center"
+                         HorizontalOptions="Center"
+                         Margin="20">
+                <Label Text="Idiom:"
+                       FontSize="Small"
+                       TextColor="White" />
+                <Label Text="{Binding Idiom}"
+                       FontSize="Small"
+                       TextColor="White" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal"
+                         Grid.Row="6"
+                         VerticalOptions="Center"
+                         HorizontalOptions="Center"
+                         Margin="20">
+                <Label Text="Device Type:"
+                       FontSize="Small"
+                       TextColor="White" />
+                <Label Text="{Binding DeviceType}"
+                       FontSize="Small"
+                       TextColor="White" />
+            </StackLayout>
+        </Grid>
+    </ScrollView>
+</views:ViewBase>
